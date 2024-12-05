@@ -59,7 +59,7 @@ Klona detta repo:
 # 🌐 API
 ## ISS Position API
 - URL: http://api.open-notify.org/iss-now.json
-- Beskrivning: Hämtar realtidsdata om ISS position (längd- och breddgrad).
+- Beskrivning: Hämtar realtidsdata om ISS position.
 
 ## NASA Astronomy Picture of the Day API
 - URL: https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
@@ -151,7 +151,7 @@ Klona detta repo:
 # 🌐 API
 ## ISS Position API
 - URL: http://api.open-notify.org/iss-now.json
-- Description: Fetches real-time position data of the ISS (latitude and longitude).
+- Description: Fetches real-time position data of the ISS.
 
 ## NASA Astronomy Picture of the Day API
 - URL: https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
