@@ -22,7 +22,7 @@ const MapScreen = () => {
     };
 
     fetchISSData();
-    const interval = setInterval(fetchISSData, 5000);
+    const interval = setInterval(fetchISSData, 1000);
     return () => clearInterval(interval);
   }, []);
 
