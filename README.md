@@ -38,7 +38,7 @@ Applikationen använder modern teknologi som React Native och Expo för att leve
 
 1. Installation
 Klona detta repo:
-- git clone <repository-url>
+- git clone https://github.com/Lucifer87878/ISS-Tracker.git
 - cd iss-tracker
 
 2. Installera beroenden:
@@ -130,7 +130,7 @@ The application leverages modern technologies like React Native and Expo to prov
 
 1. Install
 Klona detta repo:
-- git clone <repository-url>
+- git clone https://github.com/Lucifer87878/ISS-Tracker.git
 - cd iss-tracker
 
 2. Install dependencies:
