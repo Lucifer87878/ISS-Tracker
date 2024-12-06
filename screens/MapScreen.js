@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 const MapScreen = () => {
   const [issPosition, setIssPosition] = useState({ latitude: 0, longitude: 0 });
   const [isFullScreen, setIsFullScreen] = useState(false);
-  const [speed, setSpeed] = useState(27600); // ISS hastighet i km/h
+  const [speed, setSpeed] = useState(27600);
 
   useEffect(() => {
     const fetchISSData = async () => {
@@ -31,7 +31,6 @@ const MapScreen = () => {
     <SafeAreaView style={styles.container}>
       <Text style={styles.info}>ISS:s nuvarande position</Text>
       
-      {/* Visa info-box endast när kartan är i halvskärmsläge */}
       {!isFullScreen && (
         <View style={styles.infoBox}>
           <Text style={styles.label}>Current ISS Position:</Text>
