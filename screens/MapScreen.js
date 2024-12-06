@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Text, StyleSheet, TouchableOpacity, Dimensions, SafeAreaView } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, Dimensions, SafeAreaView, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const MapScreen = () => {
   const [issPosition, setIssPosition] = useState({ latitude: 0, longitude: 0 });
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [speed, setSpeed] = useState(27600); // ISS hastighet i km/h
 
   useEffect(() => {
     const fetchISSData = async () => {
@@ -29,6 +30,17 @@ const MapScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.info}>ISS:s nuvarande position</Text>
+      
+      {/* Visa info-box endast när kartan är i halvskärmsläge */}
+      {!isFullScreen && (
+        <View style={styles.infoBox}>
+          <Text style={styles.label}>Current ISS Position:</Text>
+          <Text>Latitude: {issPosition.latitude}</Text>
+          <Text>Longitude: {issPosition.longitude}</Text>
+          <Text>Speed: {speed} km/h</Text>
+        </View>
+      )}
+
       <TouchableOpacity
         onPress={() => setIsFullScreen(!isFullScreen)}
         style={isFullScreen ? styles.fullScreenMap : styles.halfScreenMap}
@@ -49,6 +61,7 @@ const MapScreen = () => {
           />
         </MapView>
       </TouchableOpacity>
+
       {!isFullScreen && (
         <TouchableOpacity onPress={() => setIsFullScreen(true)} style={styles.buttonContainer}>
           <LinearGradient
@@ -76,6 +89,20 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginVertical: 10,
     paddingTop: 70, 
+  },
+  infoBox: {
+    marginBottom: 10,
+    padding: 20,
+    backgroundColor: '#e0e0e0',
+    borderRadius: 8,
+    alignSelf: 'center',
+    width: '90%',
+  },
+  label: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    textAlign: 'center',
   },
   map: {
     flex: 1,
