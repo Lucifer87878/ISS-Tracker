@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 const MapScreen = () => {
   const [issPosition, setIssPosition] = useState({ latitude: 0, longitude: 0 });
   const [isFullScreen, setIsFullScreen] = useState(false);
-  const [speed, setSpeed] = useState(27600);
+
 
   useEffect(() => {
     const fetchISSData = async () => {
@@ -36,7 +36,6 @@ const MapScreen = () => {
           <Text style={styles.label}>Current ISS Position:</Text>
           <Text>Latitude: {issPosition.latitude}</Text>
           <Text>Longitude: {issPosition.longitude}</Text>
-          <Text>Speed: {speed} km/h</Text>
         </View>
       )}
 
