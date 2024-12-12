@@ -20,7 +20,10 @@ const ApodScreen = () => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <ScrollView style={styles.container}>
+      <ScrollView 
+        style={styles.container} 
+        contentContainerStyle={styles.scrollContent}
+      >
         {apod && (
           <>
             <Text style={styles.title}>{apod.title}</Text>
@@ -40,14 +43,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    paddingTop: 70, 
+    paddingTop: 70,
+  },
+  scrollContent: {
+    flexGrow: 1, 
+    paddingBottom: 100, 
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
-    textAlign: 'center', 
-    color: '#333', 
+    textAlign: 'center',
+    color: '#333',
   },
   image: {
     width: '100%',
@@ -58,7 +65,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 16,
     lineHeight: 24,
-    color: '#555', 
+    color: '#555',
   },
 });
 
