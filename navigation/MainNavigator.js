@@ -4,6 +4,7 @@ import HomeScreen from '../screens/HomeScreen';
 import MapScreen from '../screens/MapScreen';
 import InfoScreen from '../screens/InfoScreen';
 import ApodScreen from '../screens/ApodScreen';
+import AstrosScreen from '../screens/AstrosScreen';
 
 const Stack = createStackNavigator();
 
@@ -32,6 +33,7 @@ const MainNavigator = () => {
       />
       <Stack.Screen name="Map" component={MapScreen} />
       <Stack.Screen name="Info" component={InfoScreen} />
+      <Stack.Screen name="Astronaut" component={AstrosScreen} />
       <Stack.Screen name="Apod" component={ApodScreen} />
     </Stack.Navigator>
   );

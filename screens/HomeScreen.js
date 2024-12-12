@@ -10,7 +10,7 @@ const HomeScreen = ({ navigation }) => {
       end={{ x: 0.9, y: 1 }}
       style={styles.container}
     >
-      <Text style={styles.title}>Välkommen till ISS-Tracker!</Text>
+      <Text style={styles.title}>Välkommen till ISS-Tracker!</Text>     
       <TouchableOpacity onPress={() => navigation.navigate('Map')} style={styles.buttonContainer}>
         <LinearGradient
           colors={['#FFD439', '#FF7A00']}
@@ -20,7 +20,7 @@ const HomeScreen = ({ navigation }) => {
         >
           <Text style={styles.buttonText}>Visa Karta</Text>
         </LinearGradient>
-      </TouchableOpacity>
+      </TouchableOpacity>    
       <TouchableOpacity onPress={() => navigation.navigate('Info')} style={styles.buttonContainer}>
         <LinearGradient
           colors={['#FFD439', '#FF7A00']}
@@ -30,7 +30,7 @@ const HomeScreen = ({ navigation }) => {
         >
           <Text style={styles.buttonText}>Information om ISS</Text>
         </LinearGradient>
-      </TouchableOpacity>
+      </TouchableOpacity> 
       <TouchableOpacity onPress={() => navigation.navigate('Apod')} style={styles.buttonContainer}>
         <LinearGradient
           colors={['#FFD439', '#FF7A00']}
@@ -39,6 +39,17 @@ const HomeScreen = ({ navigation }) => {
           style={styles.gradient}
         >
           <Text style={styles.buttonText}>Astronomy Picture of the Day</Text>
+        </LinearGradient>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => navigation.navigate('Astronaut')} style={styles.buttonContainer}>
+        <LinearGradient
+          colors={['#FFD439', '#FF7A00']}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          style={styles.gradient}
+        >
+          <Text style={styles.buttonText}>Astronauter i Rymden</Text>
         </LinearGradient>
       </TouchableOpacity>
     </LinearGradient>
@@ -60,7 +71,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     marginVertical: 10,
     borderRadius: 22,
-    overflow: 'hidden', 
+    overflow: 'hidden',
     width: '70%',
   },
   gradient: {
