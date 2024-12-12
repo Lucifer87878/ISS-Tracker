@@ -2,8 +2,7 @@
 
 # ISS Tracker
 
-En interaktiv mobilapplikation som visar realtidspositionen för den internationella rymdstationen (ISS).
-Applikationen använder modern teknologi som React Native och Expo för att leverera en sömlös användarupplevelse.
+En interaktiv mobilapplikation som visar realtidspositionen för den internationella rymdstationen (ISS) samt information om astronauter i rymden och dagens astronomiska bild. Applikationen använder modern teknologi som React Native och Expo för att leverera en sömlös användarupplevelse.
 
 
 # 📋 Funktioner
@@ -11,12 +10,14 @@ Applikationen använder modern teknologi som React Native och Expo för att leve
 - Realtidspositionering av ISS med hjälp av Google Maps.
 - Elegant användargränssnitt med hjälp av React Native komponenter och animationer.
 - Integration med API:er för datainhämtning om ISS.
+- Visa information om ISS och astronauter som för närvarande är i rymden.
+- Dagens astronomiska bild från NASA med en detaljerad beskrivning.
 
 
 # 🛠️ Teknikstack
 - Frontend: React Native, Expo
 - Navigation: React Navigation
-- API: Axios, Open Notify ISS API, NASA Astronomy Picture of the Day API
+- API: Axios, Open Notify ISS API, Open Notify Astronaut API, NASA Astronomy Picture of the Day API
 - Kartor: React Native Maps
 - UI: React Native Vector Icons och Linear Gradient
 
@@ -61,6 +62,10 @@ Klona detta repo:
 - URL: http://api.open-notify.org/iss-now.json
 - Beskrivning: Hämtar realtidsdata om ISS position.
 
+## Astronaut API
+- URL: http://api.open-notify.org/astros.json
+- Beskrivning: Hämtar data om astronauter som för närvarande är i rymden, inklusive deras namn och farkost.
+
 ## NASA Astronomy Picture of the Day API
 - URL: https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 - Beskrivning: Hämtar en bild och beskrivning från NASA:s Astronomy Picture of the Day.
@@ -103,12 +108,14 @@ The application leverages modern technologies like React Native and Expo to prov
 - Real-time positioning of the ISS using Google Maps.
 - Elegant user interface using React Native components and animations.
 - Integration with APIs to fetch ISS-related data.
+- View information about ISS and astronauts currently in space.
+- NASA's Astronomy Picture of the Day with detailed description.
 
 
 # 🛠️ Tech Stack
 - Frontend: React Native, Expo
 - Navigation: React Navigation
-- API: Axios, Open Notify ISS API, NASA Astronomy Picture of the Day API
+- API: Axios, Open Notify ISS API, Open Notify Astronaut API, NASA Astronomy Picture of the Day API.
 - Maps: React Native Maps
 - UI: React Native Vector Icons and Linear Gradient
 
@@ -153,6 +160,10 @@ Klona detta repo:
 - URL: http://api.open-notify.org/iss-now.json
 - Description: Fetches real-time position data of the ISS.
 
+## Astronaut API
+- URL: http://api.open-notify.org/astros.json
+- Description: Fetches data about astronauts currently in space, including their names and spacecraft.
+
 ## NASA Astronomy Picture of the Day API
 - URL: https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 - Description: Fetches an image and description from NASA's Astronomy Picture of the Day.
@@ -182,6 +193,7 @@ Klona detta repo:
 
 ![Start sidan](img/Start.png "Start / Home")
 ![Information sida](img/info.png "Info")
+![Astronuter sida](img/Astronuter.png "Astronuter")
 ![Astronomy Picture of the Day](img/APOD.png "APOD")
 ![Karta start](img/map1.png "Map start")
 ![Stor karta](img/map2.png "Map big pic")

@@ -22,7 +22,7 @@ const AstrosScreen = () => {
     <SafeAreaView style={styles.safeArea}>
       <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}>
         <Text style={styles.title}>Astronauter i rymden</Text>
-        <Text style={styles.count}>Antal: {astronauts.length} personer</Text> {/* Visar antal astronauter */}
+        <Text style={styles.count}>Antal: {astronauts.length} personer </Text>
         {astronauts.map((astronaut, index) => (
           <View key={index} style={styles.card}>
             <Text style={styles.name}>{astronaut.name}</Text>
