@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, SafeAreaView } from 'react-native';
+import {Text, Image, StyleSheet, ScrollView, SafeAreaView } from 'react-native';
 
 const ApodScreen = () => {
   const [apod, setApod] = useState(null);

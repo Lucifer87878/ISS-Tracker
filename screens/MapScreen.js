@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Text, StyleSheet, TouchableOpacity, Dimensions, SafeAreaView, View } from 'react-native';
+import { Text, StyleSheet, Pressable, Dimensions, SafeAreaView, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -39,7 +39,7 @@ const MapScreen = () => {
         </View>
       )}
 
-      <TouchableOpacity
+      <Pressable
         onPress={() => setIsFullScreen(!isFullScreen)}
         style={isFullScreen ? styles.fullScreenMap : styles.halfScreenMap}
       >
@@ -58,10 +58,10 @@ const MapScreen = () => {
             description={`Lat: ${issPosition.latitude}, Lng: ${issPosition.longitude}`}
           />
         </MapView>
-      </TouchableOpacity>
+      </Pressable>
 
       {!isFullScreen && (
-        <TouchableOpacity onPress={() => setIsFullScreen(true)} style={styles.buttonContainer}>
+        <Pressable onPress={() => setIsFullScreen(true)} style={styles.buttonContainer}>
           <LinearGradient
             colors={['#FFD439', '#FF7A00']}
             start={{ x: 0, y: 0 }}
@@ -70,7 +70,7 @@ const MapScreen = () => {
           >
             <Text style={styles.buttonText}>Visa helskärm</Text>
           </LinearGradient>
-        </TouchableOpacity>
+        </Pressable>
       )}
     </SafeAreaView>
   );

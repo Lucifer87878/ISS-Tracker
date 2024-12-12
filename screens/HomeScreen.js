@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, Pressable, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const HomeScreen = ({ navigation }) => {
@@ -11,7 +11,7 @@ const HomeScreen = ({ navigation }) => {
       style={styles.container}
     >
       <Text style={styles.title}>Välkommen till ISS-Tracker!</Text>     
-      <TouchableOpacity onPress={() => navigation.navigate('Map')} style={styles.buttonContainer}>
+      <Pressable onPress={() => navigation.navigate('Map')} style={styles.buttonContainer}>
         <LinearGradient
           colors={['#FFD439', '#FF7A00']}
           start={{ x: 0, y: 0 }}
@@ -20,8 +20,8 @@ const HomeScreen = ({ navigation }) => {
         >
           <Text style={styles.buttonText}>Visa Karta</Text>
         </LinearGradient>
-      </TouchableOpacity>    
-      <TouchableOpacity onPress={() => navigation.navigate('Info')} style={styles.buttonContainer}>
+      </Pressable>    
+      <Pressable onPress={() => navigation.navigate('Info')} style={styles.buttonContainer}>
         <LinearGradient
           colors={['#FFD439', '#FF7A00']}
           start={{ x: 0, y: 0 }}
@@ -30,8 +30,8 @@ const HomeScreen = ({ navigation }) => {
         >
           <Text style={styles.buttonText}>Information om ISS</Text>
         </LinearGradient>
-      </TouchableOpacity> 
-      <TouchableOpacity onPress={() => navigation.navigate('Apod')} style={styles.buttonContainer}>
+      </Pressable> 
+      <Pressable onPress={() => navigation.navigate('Apod')} style={styles.buttonContainer}>
         <LinearGradient
           colors={['#FFD439', '#FF7A00']}
           start={{ x: 0, y: 0 }}
@@ -40,9 +40,9 @@ const HomeScreen = ({ navigation }) => {
         >
           <Text style={styles.buttonText}>Astronomy Picture of the Day</Text>
         </LinearGradient>
-      </TouchableOpacity>
+      </Pressable>
 
-      <TouchableOpacity onPress={() => navigation.navigate('Astronaut')} style={styles.buttonContainer}>
+      <Pressable onPress={() => navigation.navigate('Astronaut')} style={styles.buttonContainer}>
         <LinearGradient
           colors={['#FFD439', '#FF7A00']}
           start={{ x: 0, y: 0 }}
@@ -51,7 +51,7 @@ const HomeScreen = ({ navigation }) => {
         >
           <Text style={styles.buttonText}>Astronauter i Rymden</Text>
         </LinearGradient>
-      </TouchableOpacity>
+      </Pressable>
     </LinearGradient>
   );
 };

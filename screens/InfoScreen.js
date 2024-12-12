@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Image, StyleSheet, ScrollView, TouchableOpacity, Linking, SafeAreaView } from 'react-native';
+import { Text, Image, StyleSheet, ScrollView, Pressable, Linking, SafeAreaView } from 'react-native';
 
 const InfoScreen = () => {
   const openLink = (url) => {
@@ -21,15 +21,15 @@ const InfoScreen = () => {
           Här utförs banbrytande forskning inom olika områden som medicin, fysik, klimat och rymdteknologi.
         </Text>
         <Text style={styles.subTitle}>Läs mer om ISS:</Text>
-        <TouchableOpacity style={styles.link} onPress={() => openLink('https://www.nasa.gov/mission_pages/station/main/index.html')}>
+        <Pressable style={styles.link} onPress={() => openLink('https://www.nasa.gov/mission_pages/station/main/index.html')}>
           <Text style={styles.linkText}>NASA - ISS Main Page</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.link} onPress={() => openLink('https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station')}>
+        </Pressable>
+        <Pressable style={styles.link} onPress={() => openLink('https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station')}>
           <Text style={styles.linkText}>ESA - International Space Station</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.link} onPress={() => openLink('https://www.spacex.com/human-spaceflight/international-space-station')}>
+        </Pressable>
+        <Pressable style={styles.link} onPress={() => openLink('https://www.spacex.com/human-spaceflight/international-space-station')}>
           <Text style={styles.linkText}>SpaceX - ISS Missions</Text>
-        </TouchableOpacity>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );
